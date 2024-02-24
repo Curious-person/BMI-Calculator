@@ -61,11 +61,6 @@ public class MainSceneController {
                     results.setText("babae timbang mo lods");
                     calculation.setVisible(true);
                     break;
-                case "error":
-                    results.setVisible(true);
-                    results.setText("please select only one gender");
-                    calculation.setVisible(true);
-                    break;
                 default:
                     results.setVisible(true);
                     results.setText("Invalid input");
@@ -112,9 +107,7 @@ public class MainSceneController {
             }
         } else if (femalecheckbox.isSelected()) {
             return "babae";
-        } else if (femalecheckbox.isSelected() && femalecheckbox.isSelected()){
-            return "Error";
-        }
+        } 
         return "Please select gender";
    
     }
