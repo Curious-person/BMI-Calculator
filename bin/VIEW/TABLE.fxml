@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../CSS/STYLE.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER.TABLECONTROLLER">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0">
+         <image>
+            <Image url="@../PICTURES/TABLE/BG.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0">
+         <image>
+            <Image url="@../PICTURES/TABLE/YOUR%20HISTORY.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0">
+         <image>
+            <Image url="@../PICTURES/TABLE/BACK.png" />
+         </image>
+         <styleClass>
+            <String fx:value="translucent" />
+            <String fx:value="hand-cursor" />
+         </styleClass>
+      </ImageView>
+      <TableView layoutX="112.0" layoutY="158.0" prefHeight="746.0" prefWidth="1702.0">
+        <columns>
+          <TableColumn prefWidth="75.0" styleClass="custom-table-cell" text="C1" />
+          <TableColumn prefWidth="75.0" styleClass="custom-table-cell" text="C2" />
+        </columns>
+         <styleClass>
+            <String fx:value="custom-table-row" />
+            <String fx:value="custom-table-view" />
+            <String fx:value="custom-cell-column1" />
+         </styleClass>
+      </TableView>
+      <Button layoutX="186.0" layoutY="952.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="322.0" styleClass="custom-button8" text="Add">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Button>
+      <Button layoutX="790.0" layoutY="952.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="322.0" styleClass="custom-button8" text="Edit">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Button>
+      <Button layoutX="1394.0" layoutY="952.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="322.0" styleClass="custom-button9" text="Delete">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Button>
+      <Button layoutX="1825.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="—">
+         <font>
+            <Font name="Baskerville Old Face" size="20.0" />
+         </font>
+         <styleClass>
+            <String fx:value="custom-button7" />
+            <String fx:value="translucent" />
+         </styleClass>
+      </Button>
+      <Button layoutX="1870.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="X">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+         <styleClass>
+            <String fx:value="custom-button6" />
+            <String fx:value="translucent" />
+         </styleClass>
+      </Button>
+      <Button layoutX="49.0" layoutY="59.0" mnemonicParsing="false" onAction="#backbtn" prefHeight="78.0" prefWidth="78.0" style="-fx-background-color: 0000;" textFill="#ffffff00">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

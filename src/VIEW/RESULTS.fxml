@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../CSS/STYLE.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER.RESULTSCONTROLLER">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0">
+         <image>
+            <Image url="@../PICTURES/RESULTS/INSTRUCTIONS.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0">
+         <image>
+            <Image url="@../PICTURES/RESULTS/BG.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0">
+         <image>
+            <Image url="@../PICTURES/RESULTS/GREENBG.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0">
+         <image>
+            <Image url="@../PICTURES/RESULTS/BODYPARAMETERS.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0">
+         <image>
+            <Image url="@../PICTURES/RESULTS/HEIGHTWEIGHT.png" />
+         </image>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="44.5" offsetY="10.0" radius="27.6" width="67.9">
+               <color>
+                  <Color opacity="0.44999998807907104" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0">
+         <image>
+            <Image url="@../PICTURES/RESULTS/YOUR%20RESULTS.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0">
+         <image>
+            <Image url="@../PICTURES/RESULTS/BMI%20TABLE.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0">
+         <image>
+            <Image url="@../PICTURES/RESULTS/HISTORY.png" />
+         </image>
+         <styleClass>
+            <String fx:value="translucent" />
+            <String fx:value="hand-cursor" />
+         </styleClass>
+      </ImageView>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0">
+         <image>
+            <Image url="@../PICTURES/RESULTS/RESULTS.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="addtohistory" layoutX="1302.0" layoutY="926.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="324.0" styleClass="custom-button5" text="Add to History">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font></Button>
+      <Button layoutX="317.0" layoutY="926.0" mnemonicParsing="false" onAction="#btncalculate" prefHeight="63.0" prefWidth="324.0" styleClass="custom-button2" text="Retry">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+      </Button>
+      <Button layoutX="1825.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="—">
+         <font>
+            <Font name="Baskerville Old Face" size="20.0" />
+         </font>
+         <styleClass>
+            <String fx:value="custom-button7" />
+            <String fx:value="translucent" />
+         </styleClass>
+      </Button>
+      <Button layoutX="1870.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="X">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+         <styleClass>
+            <String fx:value="custom-button6" />
+            <String fx:value="translucent" />
+         </styleClass>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="237.0" layoutX="84.0" layoutY="490.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-rectangle" width="308.0" />
+      <TextField fx:id="heighttext" layoutX="101.0" layoutY="584.0" prefHeight="62.0" prefWidth="242.0" promptText="000">
+         <font>
+            <Font name="System Bold" size="44.0" />
+         </font>
+      </TextField>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="237.0" layoutX="549.0" layoutY="491.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-rectangle" width="308.0" />
+      <TextField fx:id="weighttext" layoutX="579.0" layoutY="581.0" prefHeight="62.0" prefWidth="242.0" promptText="00.0">
+         <font>
+            <Font name="System Bold" size="44.0" />
+         </font>
+      </TextField>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="59.0" layoutX="1068.0" layoutY="581.0" stroke="#ececec" strokeType="INSIDE" width="200.0" />
+      <Label fx:id="calculation" layoutX="1254.0" layoutY="265.0" prefHeight="144.0" prefWidth="326.0" text="Label" visible="false">
+         <font>
+            <Font name="Arial" size="96.0" />
+         </font>
+      </Label>
+      <Label fx:id="results" layoutX="1025.0" layoutY="589.0" text="Healthy" textFill="#202020" visible="false" wrapText="true">
+         <font>
+            <Font name="Arial Bold" size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="calculation1" layoutX="1201.0" layoutY="535.0" prefHeight="32.0" prefWidth="90.0" text="Label" visible="false">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="1797.0" layoutY="109.0" mnemonicParsing="false" onAction="#switchtotable" prefHeight="63.0" prefWidth="54.0" style="-fx-background-color: 0000;">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color opacity="0.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Button>
+   </children>
+</AnchorPane>

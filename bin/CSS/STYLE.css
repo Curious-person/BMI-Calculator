@@ -1,0 +1,274 @@
+/* Animation */
+.fade-in {
+    -fx-opacity: 0;
+    -fx-translate-x: -200;
+
+    -fx-opacity: 1;
+    -fx-translate-x: 0;
+    -fx-transition: all 1s ease;
+}
+
+/*IMAGE/BUTTON ANIMATIONS*/
+.hand-cursor{
+    -fx-cursor: hand; 
+}
+
+.translucent {
+    -fx-opacity: 1; 
+    -fx-cursor: hand;
+}
+
+.translucent:hover {
+    -fx-opacity: 0.7;
+    -fx-cursor: hand;
+}
+/*gender buttons*/
+.custom-button1 {
+    -fx-cursor: hand; 
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #202020;
+    -fx-border-radius: 2; 
+}
+
+.custom-button1:hover {
+    -fx-cursor: hand; 
+    -fx-background-color: #202020;
+    -fx-text-fill: #e0e0e0;
+}
+
+.custom-button1.custom-button1:focused {
+    -fx-cursor: hand; 
+    -fx-background-color: #202020;
+    -fx-text-fill: #e0e0e0;
+}
+/*calculate button/retry*/
+.custom-button2 {
+    -fx-cursor: hand; 
+    -fx-background-color: #202020;
+    -fx-text-fill: #E0E0E0;
+    -fx-border-radius: 2; 
+}
+
+.custom-button2:hover {
+    -fx-cursor: hand; 
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #202020;
+}
+
+.custom-button2.custom-button2:focused {
+    -fx-cursor: hand; 
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #202020;
+}
+
+/*exit button 1*/
+.custom-button3 {
+    -fx-cursor: hand; 
+    -fx-background-color: transparent;
+    -fx-text-fill: #202020;
+    -fx-border-radius: 2; 
+}
+
+.custom-button3:hover {
+    -fx-cursor: hand; 
+    -fx-background-color: #940202;
+    -fx-text-fill: #E0E0E0;
+}
+
+.custom-button3.custom-button3:focused {
+    -fx-cursor: hand; 
+    -fx-background-color: #940202;
+    -fx-text-fill: #e0e0e0;
+}
+
+/*min button 1*/
+.custom-button4 {
+    -fx-cursor: hand; 
+    -fx-background-color: transparent;
+    -fx-text-fill: #e0e0e0;
+    -fx-border-radius: 2; 
+}
+
+.custom-button4:hover {
+    -fx-cursor: hand; 
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #202020;
+}
+
+.custom-button4.custom-button4:focused {
+    -fx-cursor: hand; 
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #202020;
+}
+
+/*add to history button*/
+.custom-button5 {
+    -fx-cursor: hand; 
+    -fx-background-color: #78866C;
+    -fx-text-fill: #e0e0e0;
+    -fx-border-radius: 2; 
+}
+
+.custom-button5:hover {
+    -fx-cursor: hand; 
+    -fx-background-color: #202020;
+    -fx-text-fill: #78866C;
+}
+
+.custom-button5.custom-button5:focused {
+    -fx-cursor: hand; 
+    -fx-background-color: #202020;
+    -fx-text-fill: #78866C;
+}
+
+/*exit button 2*/
+.custom-button6 {
+    -fx-cursor: hand; 
+    -fx-background-color: transparent;
+    -fx-text-fill: #78866C;
+    -fx-border-radius: 2; 
+}
+
+.custom-button6:hover {
+    -fx-cursor: hand; 
+    -fx-background-color: #940202;
+    -fx-text-fill: #E0E0E0;
+}
+
+.custom-button6.custom-button6:focused {
+    -fx-cursor: hand; 
+    -fx-background-color: #940202;
+    -fx-text-fill: #e0e0e0;
+}
+
+/*min button 2*/
+.custom-button7 {
+    -fx-cursor: hand; 
+    -fx-background-color: transparent;
+    -fx-text-fill: #202020;
+    -fx-border-radius: 2; 
+}
+
+.custom-button7:hover {
+    -fx-cursor: hand; 
+    -fx-background-color: #202020;
+    -fx-text-fill: #E0E0E0;
+}
+
+.custom-button7.custom-button7:focused {
+    -fx-cursor: hand; 
+    -fx-background-color: #202020;
+    -fx-text-fill: #E0E0E0;
+}
+
+/*add/edit button*/
+.custom-button8 {
+    -fx-cursor: hand; 
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #202020;
+    -fx-border-radius: 2; 
+    -fx-border-color: #202020;
+    -fx-border-width: 1; 
+}
+
+.custom-button8:hover {
+    -fx-cursor: hand; 
+    -fx-background-color: #78866C;
+    -fx-text-fill: #e0e0e0;
+}
+
+.custom-button8.custom-button8:focused {
+    -fx-cursor: hand; 
+    -fx-background-color: #78866C;
+    -fx-text-fill: #e0e0e0;
+}
+
+/*delete button*/
+.custom-button9 {
+    -fx-cursor: hand; 
+    -fx-background-color: #78866C;
+    -fx-text-fill: #e0e0e0;
+    -fx-border-radius: 2; 
+    -fx-border-color: #202020;
+    -fx-border-width: 1; 
+}
+
+.custom-button9:hover {
+    -fx-cursor: hand; 
+    -fx-background-color: #202020;
+    -fx-text-fill: #e0e0e0;
+}
+
+.custom-button9.custom-button9:focused {
+    -fx-cursor: hand; 
+    -fx-background-color: #202020;
+    -fx-text-fill: #e0e0e0;
+}
+
+
+
+
+/*TEXT FIELD SHIT*/
+.text-field-with-bottom-border {
+    -fx-background-color: transparent;
+    -fx-border-color: #202020;
+    -fx-border-width: 1; 
+    -fx-text-fill: #78866C;
+    -fx-border-radius: 2; 
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 100px;
+    -fx-padding: 2px;
+}
+
+/*RESULTS TEXT*/
+.custom-text{
+    -fx-text-fill: #202020;
+    -fx-font-size: 250px;
+    -fx-font-family: "Arial Black";
+}
+
+/*PARAMETERS BOX*/
+.custom-rectangle {
+    -fx-fill: transparent;
+    -fx-stroke: #202020; 
+    -fx-stroke-width: 1; 
+    -fx-arc-width: 5;
+    -fx-arc-height: 5; 
+}
+
+/*PARAMETERS TEXT*/
+.custom-parametertext{
+    -fx-text-fill: #78866C;
+    -fx-font-size: 100px;
+    -fx-font-family: "Arial Black";
+}
+
+/*TABLE*/
+.custom-table-view {
+    -fx-background-color: #e0e0e0; /* Set the background color */
+    -fx-border-color: #202020; /* Set your desired border color */
+    -fx-border-width: 1px;
+}
+
+.custom-table-column {
+    -fx-alignment: CENTER; /* Set the text alignment */
+    -fx-font-size: 20px; /* Set the font size */
+    -fx-text-fill: #202020; /* Set the text color */
+    -fx-border-color: #202020; /* Set your desired border color */
+    -fx-border-width: 1px;
+}
+
+.custom-table-cell {
+    -fx-padding: 5px; 
+    -fx-font-size: 20px;
+    -fx-background-color: #78866C;
+    -fx-text-fill: #e0e0e0;
+    -fx-border-color: #202020; 
+    -fx-border-width: 1px;
+}
+
+.custom-table-row {
+    -fx-background-color: #e0e0e0, #e0e0e0; /* Set alternating row colors */
+    -fx-font-size: 20px;
+    -fx-text-fill: #202020;
+}
