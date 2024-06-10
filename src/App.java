@@ -19,7 +19,7 @@ public class App extends Application {
     public void start(Stage stage) throws Exception {
 
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/VIEW/RESULTS.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/VIEW/CALCULATOR.fxml"));
             stage.setTitle("BMI");
             stage.setResizable(false);
             Scene scene = new Scene(root);

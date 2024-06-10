@@ -9,18 +9,11 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.RadialGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../CSS/STYLE.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER.RESULTSCONTROLLER">
    <children>
-      <ImageView fitHeight="1080.0" fitWidth="1920.0">
-         <image>
-            <Image url="@../PICTURES/RESULTS/INSTRUCTIONS.png" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="1080.0" fitWidth="1920.0">
          <image>
             <Image url="@../PICTURES/RESULTS/BG.png" />
@@ -58,7 +51,7 @@
             <Image url="@../PICTURES/RESULTS/BMI%20TABLE.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="1080.0" fitWidth="1920.0">
+      <ImageView fx:id="history" fitHeight="1080.0" fitWidth="1920.0">
          <image>
             <Image url="@../PICTURES/RESULTS/HISTORY.png" />
          </image>
@@ -69,19 +62,25 @@
       </ImageView>
       <ImageView fitHeight="1080.0" fitWidth="1920.0">
          <image>
+            <Image url="@../PICTURES/RESULTS/INSTRUCTIONS.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0">
+         <image>
             <Image url="@../PICTURES/RESULTS/RESULTS.png" />
          </image>
       </ImageView>
-      <Button fx:id="addtohistory" layoutX="1302.0" layoutY="926.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="324.0" styleClass="custom-button5" text="Add to History">
+      <Button fx:id="addhistorybtn" layoutX="1304.0" layoutY="902.0" mnemonicParsing="false" onAction="#addToHistory" prefHeight="63.0" prefWidth="324.0" styleClass="custom-button5" text="Add to History">
          <font>
             <Font name="Arial Bold" size="23.0" />
          </font></Button>
-      <Button layoutX="317.0" layoutY="926.0" mnemonicParsing="false" onAction="#btncalculate" prefHeight="63.0" prefWidth="324.0" styleClass="custom-button2" text="Retry">
+      <Button fx:id="retrybtn" layoutX="327.0" layoutY="902.0" mnemonicParsing="false" onAction="#btncalculate1" prefHeight="63.0" prefWidth="324.0" styleClass="custom-button2" text="Retry">
          <font>
             <Font name="Arial Bold" size="23.0" />
          </font>
       </Button>
-      <Button layoutX="1825.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="—">
+
+      <Button layoutX="1825.0" layoutY="10.0" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="30.0" prefWidth="30.0" text="—">
          <font>
             <Font name="Baskerville Old Face" size="20.0" />
          </font>
@@ -90,7 +89,7 @@
             <String fx:value="translucent" />
          </styleClass>
       </Button>
-      <Button layoutX="1870.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="X">
+      <Button layoutX="1870.0" layoutY="10.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="30.0" prefWidth="30.0" text="X">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
@@ -99,51 +98,35 @@
             <String fx:value="translucent" />
          </styleClass>
       </Button>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="237.0" layoutX="84.0" layoutY="490.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-rectangle" width="308.0" />
-      <TextField fx:id="heighttext" layoutX="101.0" layoutY="584.0" prefHeight="62.0" prefWidth="242.0" promptText="000">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="237.0" layoutX="93.0" layoutY="473.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-rectangle" width="308.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="237.0" layoutX="558.0" layoutY="473.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-rectangle" width="308.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="983.0" layoutY="586.0" stroke="WHITE" strokeType="INSIDE" width="289.0" />
+      <Label fx:id="calculation" layoutX="1034.0" layoutY="130.0" styleClass="custom-text" text="00.0" />
+      <Label layoutX="1025.0" layoutY="449.0" textFill="#202020">
          <font>
-            <Font name="System Bold" size="44.0" />
-         </font>
-      </TextField>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="237.0" layoutX="549.0" layoutY="491.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-rectangle" width="308.0" />
-      <TextField fx:id="weighttext" layoutX="579.0" layoutY="581.0" prefHeight="62.0" prefWidth="242.0" promptText="00.0">
-         <font>
-            <Font name="System Bold" size="44.0" />
-         </font>
-      </TextField>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="59.0" layoutX="1068.0" layoutY="581.0" stroke="#ececec" strokeType="INSIDE" width="200.0" />
-      <Label fx:id="calculation" layoutX="1254.0" layoutY="265.0" prefHeight="144.0" prefWidth="326.0" text="Label" visible="false">
-         <font>
-            <Font name="Arial" size="96.0" />
+            <Font name="Arial Black" size="45.0" />
          </font>
       </Label>
-      <Label fx:id="results" layoutX="1025.0" layoutY="589.0" text="Healthy" textFill="#202020" visible="false" wrapText="true">
+      <Label fx:id="calculation1" layoutX="1214.0" layoutY="542.0" text="00.0" textFill="#202020">
          <font>
             <Font name="Arial Bold" size="34.0" />
          </font>
       </Label>
-      <Label fx:id="calculation1" layoutX="1201.0" layoutY="535.0" prefHeight="32.0" prefWidth="90.0" text="Label" visible="false">
+      <Label fx:id="results" layoutX="1025.0" layoutY="589.0" text="Category" textFill="#202020" wrapText="true">
          <font>
-            <Font name="System Bold" size="36.0" />
+            <Font name="Arial Bold" size="34.0" />
          </font>
       </Label>
-      <Button layoutX="1797.0" layoutY="109.0" mnemonicParsing="false" onAction="#switchtotable" prefHeight="63.0" prefWidth="54.0" style="-fx-background-color: 0000;">
-         <textFill>
-            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color opacity="0.0" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
-                     </color>
-                  </Stop>
-               </stops>
-            </RadialGradient>
-         </textFill>
-      </Button>
+      <Button fx:id="viewhistorybtn" layoutX="1799.0" layoutY="111.0" mnemonicParsing="false" onAction="#switchtotable" prefHeight="50.0" prefWidth="54.0" style="-fx-background-color: 0000;" textFill="TRANSPARENT" />
+      <TextField fx:id="weighttext" layoutX="555.0" layoutY="471.0" prefHeight="240.0" prefWidth="311.0" promptText="00.0">
+         <font>
+            <Font name="Arial Bold" size="72.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="heighttext" layoutX="90.0" layoutY="469.0" prefHeight="242.0" prefWidth="315.0" promptText="000">
+         <font>
+            <Font name="Arial Bold" size="72.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>
